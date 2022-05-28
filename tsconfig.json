@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.jsx",
+    "**/*.js",
+    "src/theme/colors.js",
+    "src/components/small/index.tss"
+  ],
+  "typeRoots": ["node_modules/@types", "@types"],
+  "exclude": ["node_modules"]
+}
