@@ -18,7 +18,7 @@ const Mendchilgee = () => {
             className="w-[278px] cursor-pointer"
           />
         </Link>
-        <div className="w-[100%] flex flex-col items-center box-border py-[20px] px-[8%] bg-gradient-to-t from-indigo-700 to-indigo-500">
+        <div className="w-[100%] flex flex-col items-center box-border py-[20px] px-[8%] bg-gradient-to-t from-indigo-700 to-indigo-500 overflow-y-hidden">
           <h1
             className="font-bold text-3xl text-white text-center bg-indigo-700 rounded-xl py-[5px] mb-[5px] px-[5px]"
             style={{ border: "2px solid white" }}
