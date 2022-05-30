@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -15,6 +14,224 @@ a {
   box-sizing: border-box;
 }
 
+.firework {
+  position: absolute;
+  z-index: 1;
+}
+.explosion {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  height: 80px;
+  transform-origin: 50% 100%;
+  /* background-color: rgba(0,0,0,.2); */
+  overflow: hidden;
+  z-index: 1;
+}
+.explosion:nth-child(1) {
+  transform: rotate(0deg) translateY(-15px);
+}
+.explosion:nth-child(2) {
+  transform: rotate(30deg) translateY(-15px);
+}
+.explosion:nth-child(3) {
+  transform: rotate(60deg) translateY(-15px);
+}
+.explosion:nth-child(4) {
+  transform: rotate(90deg) translateY(-15px);
+}
+.explosion:nth-child(5) {
+  transform: rotate(120deg) translateY(-15px);
+}
+.explosion:nth-child(6) {
+  transform: rotate(150deg) translateY(-15px);
+}
+.explosion:nth-child(7) {
+  transform: rotate(180deg) translateY(-15px);
+}
+.explosion:nth-child(8) {
+  transform: rotate(210deg) translateY(-15px);
+}
+.explosion:nth-child(9) {
+  transform: rotate(240deg) translateY(-15px);
+}
+.explosion:nth-child(10) {
+  transform: rotate(270deg) translateY(-15px);
+}
+.explosion:nth-child(11) {
+  transform: rotate(300deg) translateY(-15px);
+}
+.explosion:nth-child(12) {
+  transform: rotate(330deg) translateY(-15px);
+}
+
+@keyframes explosion {
+  0% {
+    top: 100%;
+  }
+  33%,
+  100% {
+    top: -50%;
+  }
+}
+
+.explosion::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 40px;
+  z-index: 1;
+}
+
+#firework1 {
+  left: 8%;
+  top: 12%;
+  transform: scale(0.8);
+}
+#firework1 .explosion::before {
+  animation: explosion 1.5s 0.5s ease-in-out infinite;
+}
+
+#firework2 {
+  left: 20%;
+  top: 20%;
+  transform: scale(1);
+}
+#firework2 .explosion::before {
+  animation: explosion 2s 0.2s ease-in-out infinite;
+}
+
+#firework3 {
+  left: 10%;
+  top: 50%;
+  transform: scale(0.85);
+}
+#firework3 .explosion::before {
+  animation: explosion 2s 1s ease-in-out infinite;
+}
+
+#firework4 {
+  bottom: 15%;
+  right: 10%;
+  transform: scale(1.2);
+}
+#firework4 .explosion::before {
+  animation: explosion 2s 2s ease-in-out infinite;
+}
+
+#firework5 {
+  bottom: 42%;
+  right: 7%;
+  transform: scale(0.7);
+}
+#firework5 .explosion::before {
+  animation: explosion 2s 0.7s ease-in-out infinite;
+}
+
+#firework6 {
+  right: 25%;
+  bottom: 17%;
+  transform: scale(0.9);
+}
+#firework6 .explosion::before {
+  animation: explosion 2s 0.1s ease-in-out infinite;
+}
+
+#firework7 {
+  right: 20%;
+  top: 20%;
+  transform: scale(1.3);
+}
+#firework7 .explosion::before {
+  animation: explosion 2s 0.3s ease-in-out infinite;
+}
+
+#firework8 {
+  left: 30%;
+  bottom: 18%;
+  transform: scale(1.5);
+}
+#firework8 .explosion::before {
+  animation: explosion 1.7s 0.2s ease-in-out infinite;
+}
+
+#firework9 {
+  left: 10%;
+  bottom: 10%;
+  transform: scale(0.7);
+}
+#firework9 .explosion::before {
+  animation: explosion 2.3s 0.4s ease-in-out infinite;
+}
+
+#firework10 {
+  left: 60%;
+  top: 65%;
+  transform: scale(1);
+}
+#firework10 .explosion::before {
+  animation: explosion 2s 0.1s ease-in-out infinite;
+}
+
+#firework11 {
+  left: 40%;
+  top: 20%;
+  transform: scale(1.25);
+}
+#firework11 .explosion::before {
+  animation: explosion 2s 0.6s ease-in-out infinite;
+}
+
+#firework12 {
+  right: 40%;
+  top: 25%;
+  transform: scale(0.9);
+}
+#firework12 .explosion::before {
+  animation: explosion 2s 0.2s ease-in-out infinite;
+}
+
+.fire1::before {
+  background-color: #f5cf52;
+}
+.fire2::before {
+  background-color: crimson;
+}
+.fire3::before {
+  background-color: aqua;
+}
+.fire4::before {
+  background-color: chartreuse;
+}
+.fire5::before {
+  background-color: skyblue;
+}
+.fire6::before {
+  background-color: palegreen;
+}
+.fire7::before {
+  background-color: cornflowerblue;
+}
+.fire8::before {
+  background-color: darkorange;
+}
+.fire9::before {
+  background-color: #77f52e;
+}
+.fire10::before {
+  background-color: fuchsia;
+}
+.fire11::before {
+  background-color: #2843db;
+}
+.fire12::before {
+  background-color: #fad91c;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
